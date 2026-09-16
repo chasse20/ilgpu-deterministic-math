@@ -6,12 +6,12 @@ This was a mindfuck originally when I had to do a deep debug into the inner work
 
 The ultimate solution was to avoid relying on separate host and accelerator implementations (e.g., XMath). This class instead uses shared lookup tables, fixed-point intermediate math, explicit IEEE-754 handling, and deterministic round-to-even behavior so both execution paths follow the same calculation. It provides matching CPU and ILGPU-kernel implementations for:
 
-Pow
-Log
-Log2
-Sqrt
-Exp
-Exp2
+- Pow
+- Log
+- Log2
+- Sqrt
+- Exp
+- Exp2
 
 Figuring this out was considerably more involved than I expected and sent me fairly deep into IEEE-754, FMA behavior, correctly rounded elementary functions, subnormals, and CPU/GPU numerical differences. This was run both in production environemnts for my local machine and my homelab (3xL40S GPUs!). 
 
