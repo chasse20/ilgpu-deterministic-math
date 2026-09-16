@@ -13,7 +13,7 @@ The ultimate solution was to avoid relying on separate host and accelerator impl
 - Exp
 - Exp2
 
-Figuring this out was considerably more involved than I expected and sent me fairly deep into IEEE-754, FMA behavior, correctly rounded elementary functions, subnormals, and CPU/GPU numerical differences. This was run both in production environemnts for my local machine and my homelab (3xL40S GPUs!). 
+Figuring this out was considerably more involved than I expected and sent me fairly deep into IEEE-754, FMA behavior, correctly rounded elementary functions, subnormals, and CPU/GPU numerical differences. This was run both in production environments for my local machine and my homelab (3xL40S GPUs!). 
 
 - explicit IEEE-754 bit handling
 - shared lookup tables for logarithm and exponent operations
