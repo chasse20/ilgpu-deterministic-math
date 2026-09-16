@@ -1,6 +1,6 @@
 # Deterministic GPU Math for ILGPU
 
-A small deterministic math helper I built for an ILGPU-based personal project where CPU-side calculations and GPU kernels needed to produce bit-identical results.
+A small deterministic math helper I built for an ILGPU-based personal project (2025) where CPU calculations and GPU kernels needed to produce bit-identical results.
 
 This was a mindfuck originally when I had to do a deep debug into the inner workings of ILGPU to figure out how to get the CPU and GPU in parity, beyond just the simple FMA. This was necessary given the exact precision I needed for a personal project that also involved a very complex computational algorithm. Even a one-bit difference was enough to break downstream comparisons, so normal epsilon-based floating-point checks were not an option.
 
