@@ -26,7 +26,7 @@ Figuring this out was considerably more involved than I expected and sent me fai
 
 ## ILGPU
 
-I am a huge fan of [ILGPU](https://github.com/m4rs-mt/ILGPU) and have followed the project and its development in their Discord community since its first release. It is one of the more interesting .NET projects I use consistently for everything. Being able to write GPU kernels directly in C# and have it basically match TPL in structure is underrated.
+I am a huge fan of [ILGPU](https://github.com/m4rs-mt/ILGPU) and have followed the project and its development in their Discord community since its first release. It is one of the more interesting .NET projects I use consistently for everything. Being able to write GPU kernels directly in C# and have it basically match TPL in structure is underrated. This repository is my own personal project and is not affiliated with or endorsed by ILGPU.
 
 ## References
 
