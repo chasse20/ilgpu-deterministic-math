@@ -1,8 +1,8 @@
 # Deterministic GPU Math for ILGPU
 
-A small deterministic math helper I built for an ILGPU-based personal project (2025) where CPU calculations and GPU kernels needed to produce bit-identical results.
+This is a small, low-level deterministic math helper I made while using ILGPU in 2025.
 
-This was a mindfuck originally when I had to deep dive ILGPU to figure out how to get the CPU and GPU in parity. This was necessary given the exact precision I needed for a different personal project involved a very complex computational algorithm. Even a one bit difference was enough to break downstream comparisons, so normal epsilon-based floating-point checks were not an option.
+This was designed to achieve deterministic bit parity for Log and Exp functions between GPU and CPU branches. I originally developed this as part of a larger personal project involving a very complex algorithm; it would exhaustively seed millions of samples via a Monte Carlo search to identify hard gates early, but also required the CPU branch for more efficiently handling smaller volumes thereafter. In that project, a single bit difference was enough to cause severe cumulative issues, so normal epsilon-based floating point checks were not an option.
 
 The ultimate solution was to avoid relying on separate host and accelerator implementations (e.g., XMath). This class instead uses shared lookup tables, fixed-point intermediate math, explicit IEEE-754 handling, and deterministic round-to-even behavior so both execution paths follow the same calculation. It provides matching CPU and ILGPU-kernel implementations for:
 
@@ -13,7 +13,7 @@ The ultimate solution was to avoid relying on separate host and accelerator impl
 - Exp
 - Exp2
 
-Figuring this out was considerably more involved than I expected and sent me fairly deep into IEEE-754, FMA behavior, correctly rounded elementary functions, subnormals, and CPU/GPU numerical differences. This was run both in production environments for my local machine and my homelab (3xL40S GPUs!). 
+Figuring this out was more of a mindfuck than I expected and sent me fairly deep into IEEE-754, FMA behavior, correctly rounded elementary functions, subnormals, and CPU/GPU numerical differences. This was run both on my local machine and my homelab (3xL40S GPUs!). 
 
 - explicit IEEE-754 bit handling
 - shared lookup tables for logarithm and exponent operations
