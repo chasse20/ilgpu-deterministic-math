@@ -30,8 +30,6 @@ I am a huge fan of [ILGPU](https://github.com/m4rs-mt/ILGPU) and have followed t
 
 ## References
 
-- David Goldberg, [What Every Computer Scientist Should Know About Floating-Point Arithmetic](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html). The classic overview of floating-point representation, rounding, error, and IEEE-754 behavior.
-- Nathan Whitehead and Alex Fit-Florea, NVIDIA, [Precision & Performance: Floating Point and IEEE 754 Compliance for NVIDIA GPUs](https://docs.nvidia.com/cuda/floating-point/). Particularly relevant to CPU/GPU differences, FMA, rounding modes, mathematical-function accuracy, and verification in heterogeneous systems.
-- [IEEE 754-2019: Standard for Floating-Point Arithmetic](https://standards.ieee.org/ieee/754/6210/). The underlying standard for formats, arithmetic, rounding, exceptions, NaNs, infinities, and related behavior.
-- Pierre Fortin, Mourad Gouicem, and Stef Graillat, [Correctly Rounding Elementary Functions on GPU](https://www-sop.inria.fr/marelle/Laurent.Thery/fast2018/mourad.pdf). Useful context for why correctly rounded `log`/`exp`-style functions on GPUs are considerably harder than they first appear.
-- [CORE-MATH references](https://core-math.gitlabpages.inria.fr/references.html). A useful collection of work on correctly rounded elementary functions, including CR-LIBM, RLIBM, and related research.
+- https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+- https://docs.nvidia.com/cuda/floating-point/
+- https://standards.ieee.org/ieee/754/6210/
